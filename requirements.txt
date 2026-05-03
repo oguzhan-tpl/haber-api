@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+gunicorn
+aiohttp
+feedparser
+beautifulsoup4
+python-multipart
+requests
+apscheduler
+fake-useragent
