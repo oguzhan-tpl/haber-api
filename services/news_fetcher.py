@@ -216,7 +216,7 @@ class NewsFetcher:
         if not text:
             return []
 
-        clean = re.sub(r"[^ws]", " ", text.casefold(), flags=re.UNICODE)
+        clean = re.sub(r"[^\w\s]", " ", text.casefold(), flags=re.UNICODE)
         words = clean.split()
         meaningful_words = [
             word for word in words
