@@ -1,5 +1,7 @@
-from pydantic import BaseModel
-from typing import Optional, List
+from typing import List, Optional
+
+from pydantic import BaseModel, Field
+
 
 class NewsItem(BaseModel):
     id: str
@@ -12,7 +14,8 @@ class NewsItem(BaseModel):
     category: str
     url: str
     published_at_str: str
-    keywords: List[str] = []
+    keywords: List[str] = Field(default_factory=list)
+
 
 class SourceItem(BaseModel):
     id: str
